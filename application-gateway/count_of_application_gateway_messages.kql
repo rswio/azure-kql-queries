@@ -1,0 +1,3 @@
+AzureDiagnostics 
+| where Category contains "ApplicationGatewayAccessLog"
+| summarize count() by Message
