@@ -1,0 +1,2 @@
+AzureDiagnostics 
+| summarize count() by action_s, ruleId_s
