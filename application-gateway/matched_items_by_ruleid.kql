@@ -1,0 +1,5 @@
+AzureDiagnostics 
+//| where Category contains "ApplicationGatewayAccessLog"
+| where action_s == "Matched"
+| where ruleId_s == 100200
+| order by timeStamp_t desc 
