@@ -1,0 +1,4 @@
+AzureDiagnostics 
+| where Category contains "ApplicationGatewayAccessLog"
+| where action_s == "Blocked"
+| order by timeStamp_t desc 
