@@ -1,0 +1,3 @@
+AzureDiagnostics 
+| where Category contains "Firewall" 
+| summarize count() by Message
