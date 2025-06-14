@@ -1,0 +1,2 @@
+CDBDataPlaneRequests 
+| summarize sum(RequestCharge), avg(RequestCharge), max(RequestCharge), count() by OperationName
