@@ -1,0 +1,2 @@
+AzureDiagnostics 
+| where Category contains "Firewall" and msg_s contains "UDP" and msg_s contains "Allow"
