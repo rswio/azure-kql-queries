@@ -1,0 +1,6 @@
+W3CIISLog
+| where csHost contains "servername" and (csUriStem matches regex "(?i)default.ashx")
+| project TimeGenerated, Computer, csHost, csUriStem,
+querystring1 = extract("querystringname=([^&]*)",1,tolower(csUriQuery)),
+querystring2 = extract("querystring2name=([^&]*)",1,tolower(csUriQuery)),
+TimeTaken
