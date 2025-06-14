@@ -1,0 +1,5 @@
+AzureDiagnostics 
+| where Category contains "Firewall" and msg_s contains "TCP" 
+and msg_s contains "8.8.8.8"
+and msg_s contains ":22"
+| sort by TimeGenerated desc
