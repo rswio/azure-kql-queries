@@ -1,0 +1,7 @@
+AzureDiagnostics 
+| where Category == "ApplicationGatewayFirewallLog" 
+| where action_s == "Blocked" or action_s == "Matched" 
+| where ruleSetType_s <> "MicrosoftBotProtection" 
+//| where client_ip_s != "8.8.8.8"
+| order by TimeGenerated 
+| project TimeGenerated, clientIp_s, hostname_s, requestUri_s, action_s, Message, details_message_s, ruleSetType_s, ruleId_s, details_file_s
