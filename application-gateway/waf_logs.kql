@@ -1,0 +1,6 @@
+AzureDiagnostics 
+| where Category contains "ApplicationGatewayAccessLog"
+// and httpMethod_s contains "PUT"
+// requestUri_s startswith "/account/logos/" and 
+// and host_s contains "www."
+| order by timeStamp_t desc 
