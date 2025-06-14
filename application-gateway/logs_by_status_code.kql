@@ -1,0 +1,4 @@
+AzureDiagnostics 
+| where //Category contains "Firewall" //and httpMethod_s contains "PUT"
+httpStatus_d == 404
+| order by timeStamp_t desc 
