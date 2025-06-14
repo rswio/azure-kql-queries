@@ -1,0 +1,5 @@
+CDBMongoRequests
+| where TimeGenerated > ago(24h)
+| project PIICommandText, ActivityId, DatabaseName , CollectionName, RequestCharge
+| order by RequestCharge desc
+| take 100
