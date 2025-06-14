@@ -1,0 +1,4 @@
+W3CIISLog
+| where csUriStem contains "default.ashx"
+| summarize count() by csUriStem, Computer, csHost
+| order by Computer asc, csHost asc, csUriStem asc
