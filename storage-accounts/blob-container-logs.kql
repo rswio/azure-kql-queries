@@ -1,0 +1,3 @@
+StorageBlobLogs 
+| where ObjectKey contains "containername"
+and OperationName contains "Get"
